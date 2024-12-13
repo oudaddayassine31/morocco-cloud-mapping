@@ -1,0 +1,271 @@
+{
+    "metadata": {
+        ".zattrs": {
+            "Conventions": "CF-1.7",
+            "GRIB_centre": "ecmf",
+            "GRIB_centreDescription": "European Centre for Medium-Range Weather Forecasts",
+            "GRIB_subCentre": 0,
+            "history": "2024-12-11T16:53 GRIB to CDM+CF via cfgrib-0.9.14.1/ecCodes-2.36.0 with {\"source\": \"data.grib\", \"filter_by_keys\": {}, \"encode_cf\": [\"parameter\", \"time\", \"geography\", \"vertical\"]}",
+            "institution": "European Centre for Medium-Range Weather Forecasts"
+        },
+        ".zgroup": {
+            "zarr_format": 2
+        },
+        "expver/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<U4",
+            "fill_value": null,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                3
+            ],
+            "zarr_format": 2
+        },
+        "expver/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "valid_time"
+            ]
+        },
+        "latitude/.zarray": {
+            "chunks": [
+                151
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                151
+            ],
+            "zarr_format": 2
+        },
+        "latitude/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "latitude"
+            ],
+            "long_name": "latitude",
+            "standard_name": "latitude",
+            "stored_direction": "decreasing",
+            "units": "degrees_north"
+        },
+        "longitude/.zarray": {
+            "chunks": [
+                131
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                131
+            ],
+            "zarr_format": 2
+        },
+        "longitude/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "longitude"
+            ],
+            "long_name": "longitude",
+            "standard_name": "longitude",
+            "units": "degrees_east"
+        },
+        "number/.zarray": {
+            "chunks": [],
+            "compressor": null,
+            "dtype": "<i8",
+            "fill_value": null,
+            "filters": null,
+            "order": "C",
+            "shape": [],
+            "zarr_format": 2
+        },
+        "number/.zattrs": {
+            "_ARRAY_DIMENSIONS": [],
+            "long_name": "ensemble member numerical id",
+            "standard_name": "realization",
+            "units": "1"
+        },
+        "t2m/.zarray": {
+            "chunks": [
+                1,
+                100,
+                100
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                3,
+                151,
+                131
+            ],
+            "zarr_format": 2
+        },
+        "t2m/.zattrs": {
+            "GRIB_NV": 0,
+            "GRIB_Nx": 131,
+            "GRIB_Ny": 151,
+            "GRIB_cfName": "unknown",
+            "GRIB_cfVarName": "t2m",
+            "GRIB_dataType": "fc",
+            "GRIB_gridDefinitionDescription": "Latitude/Longitude Grid",
+            "GRIB_gridType": "regular_ll",
+            "GRIB_iDirectionIncrementInDegrees": 0.1,
+            "GRIB_iScansNegatively": 0,
+            "GRIB_jDirectionIncrementInDegrees": 0.1,
+            "GRIB_jPointsAreConsecutive": 0,
+            "GRIB_jScansPositively": 0,
+            "GRIB_latitudeOfFirstGridPointInDegrees": 36.0,
+            "GRIB_latitudeOfLastGridPointInDegrees": 21.0,
+            "GRIB_longitudeOfFirstGridPointInDegrees": -13.0,
+            "GRIB_longitudeOfLastGridPointInDegrees": 0.0,
+            "GRIB_missingValue": 3.4028234663852886e+38,
+            "GRIB_name": "2 metre temperature",
+            "GRIB_numberOfPoints": 19781,
+            "GRIB_paramId": 167,
+            "GRIB_shortName": "2t",
+            "GRIB_stepType": "avgid",
+            "GRIB_stepUnits": 1,
+            "GRIB_surface": 0.0,
+            "GRIB_totalNumber": 0,
+            "GRIB_typeOfLevel": "surface",
+            "GRIB_units": "K",
+            "GRIB_uvRelativeToGrid": 0,
+            "_ARRAY_DIMENSIONS": [
+                "valid_time",
+                "latitude",
+                "longitude"
+            ],
+            "coordinates": "number time latitude longitude expver",
+            "long_name": "2 metre temperature",
+            "standard_name": "unknown",
+            "units": "K"
+        },
+        "tp/.zarray": {
+            "chunks": [
+                1,
+                100,
+                100
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                3,
+                151,
+                131
+            ],
+            "zarr_format": 2
+        },
+        "tp/.zattrs": {
+            "GRIB_NV": 0,
+            "GRIB_Nx": 131,
+            "GRIB_Ny": 151,
+            "GRIB_cfName": "unknown",
+            "GRIB_cfVarName": "tp",
+            "GRIB_dataType": "fc",
+            "GRIB_gridDefinitionDescription": "Latitude/Longitude Grid",
+            "GRIB_gridType": "regular_ll",
+            "GRIB_iDirectionIncrementInDegrees": 0.1,
+            "GRIB_iScansNegatively": 0,
+            "GRIB_jDirectionIncrementInDegrees": 0.1,
+            "GRIB_jPointsAreConsecutive": 0,
+            "GRIB_jScansPositively": 0,
+            "GRIB_latitudeOfFirstGridPointInDegrees": 36.0,
+            "GRIB_latitudeOfLastGridPointInDegrees": 21.0,
+            "GRIB_longitudeOfFirstGridPointInDegrees": -13.0,
+            "GRIB_longitudeOfLastGridPointInDegrees": 0.0,
+            "GRIB_missingValue": 3.4028234663852886e+38,
+            "GRIB_name": "Total precipitation",
+            "GRIB_numberOfPoints": 19781,
+            "GRIB_paramId": 228,
+            "GRIB_shortName": "tp",
+            "GRIB_stepType": "avgad",
+            "GRIB_stepUnits": 1,
+            "GRIB_surface": 0.0,
+            "GRIB_totalNumber": 0,
+            "GRIB_typeOfLevel": "surface",
+            "GRIB_units": "m",
+            "GRIB_uvRelativeToGrid": 0,
+            "_ARRAY_DIMENSIONS": [
+                "valid_time",
+                "latitude",
+                "longitude"
+            ],
+            "coordinates": "number time latitude longitude expver",
+            "long_name": "Total precipitation",
+            "standard_name": "unknown",
+            "units": "m"
+        },
+        "valid_time/.zarray": {
+            "chunks": [
+                3
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<i8",
+            "fill_value": null,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                3
+            ],
+            "zarr_format": 2
+        },
+        "valid_time/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "valid_time"
+            ],
+            "calendar": "proleptic_gregorian",
+            "long_name": "initial time of forecast",
+            "standard_name": "forecast_reference_time",
+            "units": "seconds since 1970-01-01"
+        }
+    },
+    "zarr_consolidated_format": 1
+}
