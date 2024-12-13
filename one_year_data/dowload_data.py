@@ -1,10 +1,10 @@
-# one_year_data/download_data.py
 import cdsapi
-import os
+from pathlib import Path
 
 def download_era5_data():
-    # Create data directories
-    os.makedirs('data/raw', exist_ok=True)
+    # Create raw data directory if it doesn't exist
+    data_dir = Path('data_2023/raw')
+    data_dir.mkdir(parents=True, exist_ok=True)
     
     client = cdsapi.Client()
     
@@ -14,6 +14,7 @@ def download_era5_data():
         'variable': [
             '2m_temperature',
             'total_precipitation',
+            'relative_humidity',
         ],
         'year': '2023',
         'month': [
@@ -24,17 +25,24 @@ def download_era5_data():
             '00:00',
         ],
         'area': [
-            36, -13, 21, 0,  # North, West, South, East
+            36, -13, 21, 0,  # North, West, South, East for Morocco
         ],
     }
     
-    print("Starting download...")
-    client.retrieve(
-        'reanalysis-era5-land-monthly-means',
-        request,
-        'data/raw/morocco_climate.nc'
-    )
-    print("Download completed!")
+    output_file = data_dir / 'morocco_climate_2023.nc'
+    print(f"Starting download to {output_file}...")
+    
+    try:
+        client.retrieve(
+            'reanalysis-era5-land-monthly-means',
+            request,
+            str(output_file)
+        )
+        print("Download completed successfully!")
+        
+    except Exception as e:
+        print(f"Error during download: {str(e)}")
+        raise
 
 if __name__ == "__main__":
     download_era5_data()

@@ -1,0 +1,9 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "valid_time",
+        "latitude",
+        "longitude"
+    ],
+    "coordinates": "expver number",
+    "units": "mm"
+}

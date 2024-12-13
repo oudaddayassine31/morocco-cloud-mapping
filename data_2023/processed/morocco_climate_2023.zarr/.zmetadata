@@ -1,0 +1,209 @@
+{
+    "metadata": {
+        ".zattrs": {
+            "Conventions": "CF-1.7",
+            "GRIB_centre": "ecmf",
+            "GRIB_centreDescription": "European Centre for Medium-Range Weather Forecasts",
+            "GRIB_subCentre": 0,
+            "history": "2024-12-13T15:30 GRIB to CDM+CF via cfgrib-0.9.14.1/ecCodes-2.36.0 with {\"source\": \"data.grib\", \"filter_by_keys\": {}, \"encode_cf\": [\"parameter\", \"time\", \"geography\", \"vertical\"]}",
+            "institution": "European Centre for Medium-Range Weather Forecasts"
+        },
+        ".zgroup": {
+            "zarr_format": 2
+        },
+        "expver/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<U4",
+            "fill_value": null,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                12
+            ],
+            "zarr_format": 2
+        },
+        "expver/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "valid_time"
+            ]
+        },
+        "latitude/.zarray": {
+            "chunks": [
+                151
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                151
+            ],
+            "zarr_format": 2
+        },
+        "latitude/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "latitude"
+            ],
+            "long_name": "latitude",
+            "standard_name": "latitude",
+            "stored_direction": "decreasing",
+            "units": "degrees_north"
+        },
+        "longitude/.zarray": {
+            "chunks": [
+                131
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                131
+            ],
+            "zarr_format": 2
+        },
+        "longitude/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "longitude"
+            ],
+            "long_name": "longitude",
+            "standard_name": "longitude",
+            "units": "degrees_east"
+        },
+        "number/.zarray": {
+            "chunks": [],
+            "compressor": null,
+            "dtype": "<i8",
+            "fill_value": null,
+            "filters": null,
+            "order": "C",
+            "shape": [],
+            "zarr_format": 2
+        },
+        "number/.zattrs": {
+            "_ARRAY_DIMENSIONS": [],
+            "long_name": "ensemble member numerical id",
+            "standard_name": "realization",
+            "units": "1"
+        },
+        "t2m/.zarray": {
+            "chunks": [
+                1,
+                100,
+                100
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                12,
+                151,
+                131
+            ],
+            "zarr_format": 2
+        },
+        "t2m/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "valid_time",
+                "latitude",
+                "longitude"
+            ],
+            "coordinates": "expver number",
+            "units": "celsius"
+        },
+        "tp/.zarray": {
+            "chunks": [
+                1,
+                100,
+                100
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                12,
+                151,
+                131
+            ],
+            "zarr_format": 2
+        },
+        "tp/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "valid_time",
+                "latitude",
+                "longitude"
+            ],
+            "coordinates": "expver number",
+            "units": "mm"
+        },
+        "valid_time/.zarray": {
+            "chunks": [
+                12
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<i8",
+            "fill_value": null,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                12
+            ],
+            "zarr_format": 2
+        },
+        "valid_time/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "valid_time"
+            ],
+            "calendar": "proleptic_gregorian",
+            "long_name": "initial time of forecast",
+            "standard_name": "forecast_reference_time",
+            "units": "seconds since 1970-01-01"
+        }
+    },
+    "zarr_consolidated_format": 1
+}
