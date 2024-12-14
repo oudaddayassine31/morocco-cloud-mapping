@@ -35,7 +35,7 @@ VARIABLE_CONFIGS = {
     },
     'tp': {
         'vmin': 0,
-        'vmax': 200,    # Adjusted based on actual data range
+        'vmax': 500,    # Adjusted based on actual data range
         'colormap': 'Blues',
         'description': 'Total precipitation',
         'convert_func': lambda x: x*1000  # No conversion needed, keeping original units

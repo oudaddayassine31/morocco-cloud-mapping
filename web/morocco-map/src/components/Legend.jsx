@@ -1,6 +1,6 @@
 import React from 'react';
-import { Paper, Typography, Box } from '@mui/material';
-import { DeviceThermostat, WaterDrop } from '@mui/icons-material'
+import { Box, Typography } from '@mui/material';
+import { DeviceThermostat, WaterDrop } from '@mui/icons-material';
 
 const Legend = ({ variable }) => {
   const getLegendConfig = () => {
@@ -9,35 +9,32 @@ const Legend = ({ variable }) => {
         title: 'Temperature',
         min: '-2°C',
         max: '40°C',
-        gradient: 'linear-gradient(to right, #053061, #2166ac, #4393c3, #92c5de, #f7f7f7, #f4a582, #d6604d, #b2182b, #67001f)',
+        gradientClass: 'temperature-gradient',
         note: 'Average temperature at 2m height',
-        icon: <DeviceThermostat fontSize="small" />
+        icon: <DeviceThermostat fontSize="small" color="primary" />
       };
     }
     return {
       title: 'Precipitation',
       min: '0mm',
-      max: '3000mm',
-      gradient: 'linear-gradient(to right, #f7fbff, #deebf7, #c6dbef, #9ecae1, #6baed6, #4292c6, #2171b5, #08519c, #08306b)',
+      max: '500mm',
+      gradientClass: 'precipitation-gradient',
       note: 'Total precipitation',
-      icon: <WaterDrop fontSize="small" />
+      icon: <WaterDrop fontSize="small" color="primary" />
     };
   };
 
   const config = getLegendConfig();
 
   return (
-    <Paper
-      elevation={3}
-      className="legend-container"
-    >
+    <Box>
       <Box display="flex" alignItems="center" gap={1} mb={1}>
         {config.icon}
         <Typography variant="subtitle2" color="primary">
           {config.title}
         </Typography>
       </Box>
-      <div className="legend-gradient" />
+      <div className={`legend-gradient ${config.gradientClass}`} />
       <Box display="flex" justifyContent="space-between" mb={1}>
         <Typography variant="caption">{config.min}</Typography>
         <Typography variant="caption">{config.max}</Typography>
@@ -45,7 +42,8 @@ const Legend = ({ variable }) => {
       <Typography variant="caption" color="textSecondary">
         {config.note}
       </Typography>
-    </Paper>
+    </Box>
   );
 };
+
 export default Legend;

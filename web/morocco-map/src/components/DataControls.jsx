@@ -5,9 +5,7 @@ import { DeviceThermostat, WaterDrop } from '@mui/icons-material'; // Changed ic
 const DataControls = ({ variable, onVariableChange }) => {
   return (
     <Paper elevation={0} className="data-controls-container">
-      <Typography variant="subtitle2" color="primary" gutterBottom>
-        Variable
-      </Typography>
+
       <FormControl fullWidth size="small">
         <Select
           value={variable}
